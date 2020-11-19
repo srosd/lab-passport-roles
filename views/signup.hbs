@@ -1,0 +1,44 @@
+<a href="/user-page">Go back to user page</a>
+<form action="/signup" method="POST">
+
+<label for="username">Username: </label>
+<input type="text" id="username" name="username"> 
+<br>
+
+<label for="name">Name: </label>
+<input type="text" id="name" name="name"> 
+<br>
+
+<label for="password">Password: </label>
+<input type="password" id="password" name="password">
+<br>
+
+<label for="profileImg">Link to profile image: </label>
+<input type="text" id="profileImg" name="profileImg"> 
+<br>
+
+<label for="description">Description: </label>
+<input type="text" id="description" name="description"> 
+<br>
+
+<label for="facebookId">facebookId: </label>
+<input type="text" id="facebookId" name="facebookId"> 
+<br>
+
+<label for="role">Assign role: </label>
+<select name="role" id="role">
+  <option value="BOSS">BOSS</option> 
+  <option value="DEV">DEV</option>
+  <option value="TA">TA</option>
+  <option value="STUDENT">STUDENT</option>
+  <option value="GUEST">GUEST</option>
+</select>
+<br>
+
+<button type="submit">CREATE USER</button>
+
+{{#if errorMessage}}
+  <p style="color: orangered;">{{errorMessage}}</p>
+{{/if}}
+
+</form>
